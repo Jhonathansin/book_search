@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body {
+    display: grid;
+    grid-template-rows: minmax(10vh, auto) minmax(70vh, auto) minmax(10vh, auto);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid grey;
+}
+
+header#sobre {
+    justify-content: flex-start;
+}
+
+header#sobre a {
+    text-decoration: none;
+    color: white;
+}
+
+header#sobre a:hover {
+    transform: translateY(-3px);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header select {
+    margin-right: 5px;
+    cursor: pointer;
+    outline: none;
+    margin: 3px;
+    background-color: transparent;
+    appearance: none;
+    overflow: hidden;
+    color: grey;
+    appearance: none;
+}
+
+
+header div {
+    display: flex;
+    margin: 3px;
+}
+
+header div input {
+    border-radius: 0;
+    border: 1px solid grey;
+    outline: none;
+    padding: 0 5px;
+    background-color: transparent;
+    color: grey;
+}
+
+header div input[type="submmit"] {
+    border-radius: 0;
+    border: 1px solid grey;
+    background-color: white;
+    border-left: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0 5px;
+    color: white;
+    font-size: 12px;
+}
+
+header input[type="submit"]:hover {
+    background-color: #00000022;
+    color: white;
+    cursor: pointer;
+}
+
+#containerSobre {
+    width: 60%;
+    margin-top: 50px;
+    border: 1px solid grey;
+    padding: 25px 5px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: white;
+}
+
+.container {
+    width: 400px;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    padding: 5px;
+    margin: 2px 5px 5px 5px;
+    border: 1px solid grey;
+}
+
+.container > div {
+    width: 120px;
+    height:150px;
+    background-size: cover;
+    background-position-x: right;
+    background-position-y: top;
+    grid-row: 4 / span 6;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    min-height: 170px;
+    max-height: 200px;
+    background-repeat: no-repeat;
+    height: 100%;
+    /* width: fit-content; */
+}
+
+.container h2 {
+    font-size: 20px;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    background-color: #ffffffaa;
+    padding: 5px;
+}
+
+.container p:first-of-type {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    background-color: #ffffffaa;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.container i {
+    grid-column: 1 / span 2;
+    text-align: center;
+    background-color: #ffffff55;
+    padding: 5px;
+}
+
+.container p:nth-of-type(2) {
+    grid-column: 1;
+}
+
+.container span, .container a {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.container p:nth-of-type(1n+2) {
+    font-size: 12px;
+    border-bottom: 1px solid black;
+    margin-top: 2px;
+    padding-left: 5px;
+}
+
+.container span {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.container span:nth-of-type(2) {
+    border-bottom: 1px solid black;
+}
+
+.container nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 440px) {
+    .container nav a {
+        width: 100%;
+        margin-bottom: 2px;
+    }
+}
+
+.container nav a {
+    background-color: white;
+    padding: 5px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    border: 1px solid grey;
+}
+
+.container nav a:hover {
+    transform: translateY(-3px);
+}
+
+footer {
+    background-color: #000000;
+    border-top: 1px solid grey;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    display: relative;
+    bottom: 0;
+}
+
+footer a:hover {
+    position: relative;
+    transform: translateY(-3px);
+}
+
+#sobreBlock {
+    color: grey;
+    cursor: default;
+}
+
+@media only screen and (max-width: 600px) {
+    select {
+        width: 90%;
+        font-size: 20px;
+    }
+
+    header div {
+        width: 90%;
+    }
+
+    header div input[type="text"] {
+        font-size: 20px;
+        width: 75%;
+    }
+
+    header div input[type="submit"] {
+        font-size: 16px;
+        width: 25%;
+        cursor: pointer;
+    }
+
+    .container {
+        width: 100%;
+        overflow-wrap: anywhere;
+    }
+}
